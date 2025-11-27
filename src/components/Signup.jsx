@@ -1,0 +1,95 @@
+import { useState } from "react";
+import Button from "./Button";
+
+const Signup = () => {
+  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [mode, setMode] = useState("login");
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log(firstName);
+    console.log(lastName);
+    console.log(email);
+    console.log(password);
+    console.log(confirmPassword);
+    setMode((prev) => (prev === "signup" ? "login" : "signup"));
+  };
+  return (
+    <form onSubmit={submitHandler} className="signup-form">
+      {mode === "signup" && (
+        <>
+          <label htmlFor="firstName">First Name*</label>
+          <input
+            type="text"
+            id="firstName"
+            placeholder="First Name"
+            onChange={(e) => setFirstName(e.target.value)}
+            required
+          />
+          <label htmlFor="lastName">Last Name*</label>
+          <input
+            type="text"
+            id="lastName"
+            required
+            placeholder="Last Name"
+            onChange={(e) => setLastName(e.target.value)}
+          />
+        </>
+      )}
+      <label htmlFor="email">Email*</label>
+      <input
+        type="email"
+        id="email"
+        required
+        placeholder="Enter Email"
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <label htmlFor="password">Password*</label>
+      <input
+        type="password"
+        id="password"
+        required
+        placeholder="Enter Password"
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      {mode === "signup" && (
+        <>
+          <label htmlFor="confirmPassword">Password*</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            required
+            placeholder="Confirm Password"
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+        </>
+      )}
+      <a href="#">Forgot Password</a>
+      <Button
+        name={mode === "signup" ? "Signup" : "Login"}
+        type="button"
+        onClick={() => console.log("Signup clicked")}
+        styles={{ padding: "16px", borderRadius: "10px", marginTop: "20px" }}
+      />
+      <p>
+        {mode === "login" ? (
+          <>
+            <span>New User? </span>
+            <a onClick={() => setMode("signup")}>Signup</a>
+          </>
+        ) : (
+          <>
+            <span>Registered User? </span>
+            <a onClick={() => setMode("login")}>Login</a>{" "}
+          </>
+        )}
+      </p>
+    </form>
+  );
+};
+
+export default Signup;

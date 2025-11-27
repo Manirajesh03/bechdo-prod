@@ -1,0 +1,64 @@
+{
+  "featuredProducts": [
+    {
+      "title": "Samsung Galaxy S25 Ultra",
+      "price": "82000",
+      "productId": "1",
+      "description": "Excellent Mobile with no scratches",
+      "imgs": [
+        {
+          "imgId": 1,
+          "imgUrl": "https://m.media-amazon.com/images/I/71-d7XDbhIL._SX679_.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Apple Iphone A17 Pro",
+      "price": "112000",
+      "productId": "2",
+      "description": "Excellent Mobile with no scratches",
+      "imgs": [
+        {
+          "imgId": 1,
+          "imgUrl": "https://m.media-amazon.com/images/I/71R8VsJ07nL._SX425_.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Apple Iphone 15",
+      "price": "42000",
+      "productId": "3",
+      "description": "Excellent Mobile with no scratches",
+      "imgs": [
+        {
+          "imgId": 1,
+          "imgUrl": "https://m.media-amazon.com/images/I/71nvkHnPpZL._AC_UL320_.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Apple Iphone Air 1",
+      "price": "122000",
+      "productId": "4",
+      "description": "Excellent Mobile with no scratches",
+      "imgs": [
+        {
+          "imgId": 1,
+          "imgUrl": "https://m.media-amazon.com/images/I/61Ce-6B6x+L._SX425_.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Motorola Edge 40 Neo",
+      "price": "12000",
+      "productId": "5",
+      "description": "Excellent Mobile with no scratches",
+      "imgs": [
+        {
+          "imgId": 1,
+          "imgUrl": "https://motorolaroe.vtexassets.com/arquivos/ids/157450-800-auto?width=800&height=auto&aspect=true"
+        }
+      ]
+    }
+  ]
+}
