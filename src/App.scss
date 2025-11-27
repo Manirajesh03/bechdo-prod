@@ -206,7 +206,11 @@ body {
     .signup-form {
       width: 70%;
     }
+  }
+}
 
+@media screen and (max-width: 578px) {
+  .App {
     .navbar {
       padding: 20px;
     }
