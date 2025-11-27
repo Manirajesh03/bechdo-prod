@@ -25,7 +25,7 @@ const ProductCard = ({ title, price, description, imgs, item }) => {
   return (
     <>
       <div className="product-card">
-        <h4>{title}</h4>
+        <p className="product-title">{title}</p>
         <div className="img-container">
           <button onClick={prevImg} type="button" disabled={activeImg === 0}>
             {"<"}
@@ -43,11 +43,11 @@ const ProductCard = ({ title, price, description, imgs, item }) => {
             {">"}
           </button>
         </div>
-        <h1>
-          <span>&#8377;</span>
+        <p className="price">
+          <span>&#8377; </span>
           {price}
-        </h1>
-        <p>{description}</p>
+        </p>
+        <p className="description">{description}</p>
         <Button name={"View Details"} onClick={() => viewDetails(item)} />
       </div>
     </>

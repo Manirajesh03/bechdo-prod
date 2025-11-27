@@ -30,7 +30,8 @@ const Navbar = () => {
     <div className="navbar">
       <div className="logo-container">
         <h2 className="logo" onClick={backToHome}>
-          Bechdo
+          SastaDealz
+          <span className="tagline">Why Pay More?</span>
         </h2>
       </div>
 
