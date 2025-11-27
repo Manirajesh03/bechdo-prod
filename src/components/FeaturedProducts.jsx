@@ -9,7 +9,7 @@ const FeaturedProducts = () => {
 
   return (
     <>
-      <h1 className="featured-products-title">Featured Products</h1>
+      <h2 className="featured-products-title">Featured Products</h2>
       <div className="featured-products-container">
         {featuredProducts?.map((item) => {
           const { title, price, description, imgs, productId } = item;

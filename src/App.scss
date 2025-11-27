@@ -30,12 +30,17 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+  }
+
+  .content {
+    flex: 1;
   }
 
   .logo {
     color: $primaryColor;
     padding: 3px 16px;
-    border-radius: 40px;
+    border-radius: 12px;
     background: #000;
     border: 1px solid rgba(64, 224, 208, 0.4);
     font-weight: 700;
@@ -232,8 +237,62 @@ body {
     }
   }
 
+  .footer {
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; // space between logo and address
+    background: #000;
+    box-shadow: inset 0 2px 4px rgba(64, 224, 208, 0.05),
+      0 -4px 12px rgba(64, 224, 208, 0.25);
+    border-radius: 12px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+
+    .logo-short {
+      width: 50px;
+      height: 50px;
+      background: #000;
+      color: turquoise;
+      font-weight: 700;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      border: 1px solid rgba(64, 224, 208, 0.4);
+      box-shadow: 0 0 8px rgba(64, 224, 208, 0.3);
+      cursor: pointer;
+      transition: 0.25s ease;
+
+      &:hover {
+        box-shadow: 0 0 16px rgba(64, 224, 208, 0.45),
+          0 0 24px rgba(64, 224, 208, 0.25);
+        transform: translateY(-2px);
+        color: #7fffea;
+      }
+    }
+
+    .CompanyAddress {
+      p {
+        margin: 2px 0;
+        color: rgba(64, 224, 208, 0.8);
+        font-size: 14px;
+      }
+
+      h4 {
+        margin-bottom: 8px;
+        color: turquoise;
+        font-weight: 600;
+        margin-top: 0;
+      }
+    }
+  }
+
   .featured-products-title {
     color: $primaryColor;
+    text-align: center;
   }
 
   .featured-products-container {
@@ -242,6 +301,11 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+  }
+
+  .made-with-love {
+    margin-top: 0px;
+    color: $primaryColor;
   }
 
   .user-dialog {
@@ -270,6 +334,10 @@ body {
 @media screen and (max-width: 578px) {
   .App {
     .navbar {
+      padding: 20px;
+    }
+
+    .footer {
       padding: 20px;
     }
   }
