@@ -1,16 +1,16 @@
+import { useState } from "react";
 import { viewProduct } from "../redux/actions";
 import Button from "./Button";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ title, price, description, imgs, item }) => {
+  const [activeImg, setActiveImg] = useState(0);
   const storeData = useSelector((store) => store?.auth);
-  console.log(storeData, "strdata");
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const viewDetails = (item) => {
-    console.log(storeData, item, "storeData");
     if (storeData?.isAuthenticated) {
       dispatch(viewProduct(item));
       navigate("/viewDetails");
@@ -19,18 +19,30 @@ const ProductCard = ({ title, price, description, imgs, item }) => {
     }
   };
 
+  const nextImg = () => setActiveImg((prev) => prev + 1);
+  const prevImg = () => setActiveImg((prev) => prev - 1);
+
   return (
     <>
       <div className="product-card">
         <h4>{title}</h4>
-        {imgs?.map((img) => (
+        <div className="img-container">
+          <button onClick={prevImg} type="button" disabled={activeImg === 0}>
+            {"<"}
+          </button>
           <img
-            src={img?.imgUrl}
-            key={img?.imgId}
+            src={imgs[activeImg]?.imgUrl}
             alt="product-image"
             className="product-image"
           />
-        ))}
+          <button
+            onClick={nextImg}
+            type="button"
+            disabled={activeImg === imgs.length - 1}
+          >
+            {">"}
+          </button>
+        </div>
         <h1>
           <span>&#8377;</span>
           {price}

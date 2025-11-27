@@ -9,6 +9,14 @@
         {
           "imgId": 1,
           "imgUrl": "https://m.media-amazon.com/images/I/71-d7XDbhIL._SX679_.jpg"
+        },
+        {
+          "imgId": 2,
+          "imgUrl": "https://m.media-amazon.com/images/I/71v4umKBOKL._SL1500_.jpg"
+        },
+        {
+          "imgId": 3,
+          "imgUrl": "https://images.samsung.com/is/image/samsung/p6pim/in/2501/gallery/in-galaxy-s25-s938-sm-s938bztbins-544702925?imbypass=true"
         }
       ]
     },
@@ -21,6 +29,10 @@
         {
           "imgId": 1,
           "imgUrl": "https://m.media-amazon.com/images/I/71R8VsJ07nL._SX425_.jpg"
+        },
+        {
+          "imgId": 2,
+          "imgUrl": "https://m.media-amazon.com/images/I/91crodPatIL._SX425_.jpg"
         }
       ]
     },
@@ -32,7 +44,11 @@
       "imgs": [
         {
           "imgId": 1,
-          "imgUrl": "https://m.media-amazon.com/images/I/71nvkHnPpZL._AC_UL320_.jpg"
+          "imgUrl": "https://m.media-amazon.com/images/I/31KxpX7Xk7L._SY300_SX300_QL70_FMwebp_.jpg"
+        },
+        {
+          "imgId": 2,
+          "imgUrl": "https://m.media-amazon.com/images/I/51brdXeugJL._SX522_.jpg"
         }
       ]
     },
@@ -44,19 +60,11 @@
       "imgs": [
         {
           "imgId": 1,
-          "imgUrl": "https://m.media-amazon.com/images/I/61Ce-6B6x+L._SX425_.jpg"
-        }
-      ]
-    },
-    {
-      "title": "Motorola Edge 40 Neo",
-      "price": "12000",
-      "productId": "5",
-      "description": "Excellent Mobile with no scratches",
-      "imgs": [
+          "imgUrl": "https://m.media-amazon.com/images/I/31ZXFqgSRaL._SX342_SY445_QL70_FMwebp_.jpg"
+        },
         {
-          "imgId": 1,
-          "imgUrl": "https://motorolaroe.vtexassets.com/arquivos/ids/157450-800-auto?width=800&height=auto&aspect=true"
+          "imgId": 2,
+          "imgUrl": "https://m.media-amazon.com/images/I/61fvItq6e0L._SX425_.jpg"
         }
       ]
     }
