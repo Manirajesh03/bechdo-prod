@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Search from "./Search";
 import Button from "./Button";
 import userIcon from "../assets/user.png";
+import searchIcon from "../assets/search.png";
+import closeIcon from "../assets/close.png";
 import { useDispatch, useSelector } from "react-redux";
 import { loginAction, logoutAction } from "../redux/actions";
 
 const Navbar = () => {
   const [openDialog, setOpenDialog] = useState(false);
   const isLogin = useSelector((store) => store?.auth?.isAuthenticated);
-  const [isLoggedIn, setIsLoggedIn] = useState(isLogin);
+  const [searchBlock, setSearchBlock] = useState(false);
 
   const dispatch = useDispatch();
   console.log(isLogin, "isLogin");
@@ -35,6 +38,10 @@ const Navbar = () => {
     setOpenDialog((prev) => !prev);
   };
 
+  const searchHandler = () => {
+    setSearchBlock((prev) => !searchBlock);
+  };
+
   return (
     <div className="navbar">
       <div className="logo-container">
@@ -43,8 +50,14 @@ const Navbar = () => {
           <span className="tagline">Why Pay More?</span>
         </h2>
       </div>
+      {searchBlock && <Search onBlur={() => setSearchBlock(false)} />}
 
       <div className="profile-block">
+        <img
+          src={searchBlock ? closeIcon : searchIcon}
+          alt="user-icon"
+          onClick={searchHandler}
+        />
         <img src={userIcon} alt="user-icon" onClick={userClickHandler} />
         <Button
           name={isLogin ? "Logout" : "Login"}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
 
-const Search = () => {
+const Search = ({ onBlur }) => {
   const [inputValue, setInputValue] = useState("");
 
   const searchProducts = () => {
@@ -15,6 +15,7 @@ const Search = () => {
         className="input-field search-input"
         onChange={(e) => setInputValue(e.target.value)}
         placeholder="Search products"
+        onBlur={onBlur}
       ></input>
       <Button
         name={"Search"}
