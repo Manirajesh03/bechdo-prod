@@ -19,13 +19,11 @@ const Navbar = () => {
 
   const loginClickHandler = () => {
     console.log("Login clicked");
-    navigate("/signup");
-
-    if (isLogin) {
-      dispatch(logoutAction());
+    if (!isLogin) {
+      navigate("/signup");
       console.log(isLogin, "test login");
     } else {
-      dispatch(loginAction());
+      dispatch(logoutAction());
     }
   };
 
