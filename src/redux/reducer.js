@@ -21,6 +21,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         auth: { isAuthenticated: false },
+        viewProduct: [],
       };
     default:
       return state;

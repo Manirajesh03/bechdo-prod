@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loginAction } from "../redux/actions";
 import { useNavigate } from "react-router-dom";
 
@@ -11,13 +11,18 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [mode, setMode] = useState("login");
+  const viewProductFlow = useSelector((store) => store?.viewProduct);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(loginAction());
-    navigate("/");
+    if (!viewProductFlow.length) {
+      navigate("/");
+    } else {
+      navigate("/viewDetails");
+    }
   };
   return (
     <form onSubmit={submitHandler} className="signup-form">

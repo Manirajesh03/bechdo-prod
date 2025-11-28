@@ -33,6 +33,14 @@ body {
     min-height: 100vh;
   }
 
+  .desktop-only {
+    display: flex;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
   .content {
     flex: 1;
   }
@@ -363,5 +371,39 @@ body {
       min-width: 500px;
       width: 30%;
     }
+  }
+}
+
+/* Below 992px — Mobile Rules */
+@media (max-width: 992px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: block !important;
+    width: 28px;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 260px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    z-index: 999;
+    border-radius: 10px;
+  }
+
+  .menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 }

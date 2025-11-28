@@ -14,7 +14,9 @@ const ProductCard = ({ title, price, description, imgs, item }) => {
     if (storeData?.isAuthenticated) {
       dispatch(viewProduct(item));
       navigate("/viewDetails");
+      console.log(item);
     } else {
+      dispatch(viewProduct(item));
       navigate("/signup");
     }
   };
