@@ -1,4 +1,4 @@
-import { LOGIN_ACTION, VIEW_PRODUCT } from "./actionTypes";
+import { LOGIN_ACTION, LOGOUT_ACTION, VIEW_PRODUCT } from "./actionTypes";
 
 export const viewProduct = (payload) => {
   console.log(payload, "payload");
@@ -11,5 +11,11 @@ export const viewProduct = (payload) => {
 export const loginAction = () => {
   return {
     type: LOGIN_ACTION,
+  };
+};
+
+export const logoutAction = () => {
+  return {
+    type: LOGOUT_ACTION,
   };
 };

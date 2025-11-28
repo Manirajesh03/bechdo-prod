@@ -2,6 +2,7 @@ import ProductCard from "./ProductCard";
 import { useSelector } from "react-redux";
 
 const ViewProductDetails = () => {
+  console.log("Rendered ViewProductDetails");
   const storeData = useSelector((state) => state);
   console.log(storeData);
 

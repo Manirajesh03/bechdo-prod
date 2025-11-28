@@ -67,6 +67,70 @@
           "imgUrl": "https://m.media-amazon.com/images/I/61fvItq6e0L._SX425_.jpg"
         }
       ]
+    },
+    {
+      "title": "OnePlus 15",
+      "price": "52000",
+      "productId": "5",
+      "description": "Excellent Mobile with no scratches",
+      "imgs": [
+        {
+          "imgId": 1,
+          "imgUrl": "https://m.media-amazon.com/images/I/616kkUbRg4L._SX679_.jpg"
+        },
+        {
+          "imgId": 2,
+          "imgUrl": "https://m.media-amazon.com/images/I/51lePOvNgZL._SX679_.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Samsung Galaxy M36",
+      "price": "8000",
+      "productId": "6",
+      "description": "Excellent Mobile with no scratches",
+      "imgs": [
+        {
+          "imgId": 1,
+          "imgUrl": "https://m.media-amazon.com/images/I/61Ide0GDLVL._SL1500_.jpg"
+        },
+        {
+          "imgId": 2,
+          "imgUrl": "https://m.media-amazon.com/images/I/616ciCs-JRL._SL1500_.jpg"
+        }
+      ]
+    },
+    {
+      "title": "IQOO Neo 10",
+      "price": "8000",
+      "productId": "7",
+      "description": "Excellent Mobile with no scratches",
+      "imgs": [
+        {
+          "imgId": 1,
+          "imgUrl": "https://m.media-amazon.com/images/I/4146uuCQ1UL._SY300_SX300_QL70_FMwebp_.jpg"
+        },
+        {
+          "imgId": 2,
+          "imgUrl": "https://m.media-amazon.com/images/I/61M17ujmEWL._SL1200_.jpg"
+        }
+      ]
+    },
+    {
+      "title": "IQOO Z10",
+      "price": "18000",
+      "productId": "8",
+      "description": "Excellent Mobile with no scratches",
+      "imgs": [
+        {
+          "imgId": 1,
+          "imgUrl": "https://m.media-amazon.com/images/I/41Q9iRQgMjL._SY300_SX300_QL70_FMwebp_.jpg"
+        },
+        {
+          "imgId": 2,
+          "imgUrl": "https://m.media-amazon.com/images/I/71lzm-duBKL._SX522_.jpg"
+        }
+      ]
     }
   ]
 }

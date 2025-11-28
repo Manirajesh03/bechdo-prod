@@ -3,18 +3,27 @@ import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 import userIcon from "../assets/user.png";
 import { useDispatch, useSelector } from "react-redux";
-import { loginAction } from "../redux/actions";
+import { loginAction, logoutAction } from "../redux/actions";
 
 const Navbar = () => {
   const [openDialog, setOpenDialog] = useState(false);
-  const storeData = useSelector((store) => store?.auth?.isAuthenticated);
-  const navigate = useNavigate();
+  const isLogin = useSelector((store) => store?.auth?.isAuthenticated);
+  const [isLoggedIn, setIsLoggedIn] = useState(isLogin);
+
   const dispatch = useDispatch();
+  console.log(isLogin, "isLogin");
+  const navigate = useNavigate();
 
   const loginClickHandler = () => {
     console.log("Login clicked");
-    dispatch(loginAction());
-    console.log(storeData, "storeData");
+    navigate("/signup");
+
+    if (isLogin) {
+      dispatch(logoutAction());
+      console.log(isLogin, "test login");
+    } else {
+      dispatch(loginAction());
+    }
   };
 
   const backToHome = () => {
@@ -38,14 +47,14 @@ const Navbar = () => {
       <div className="profile-block">
         <img src={userIcon} alt="user-icon" onClick={userClickHandler} />
         <Button
-          name={storeData ? "Logout" : "Login"}
+          name={isLogin ? "Logout" : "Login"}
           onClick={loginClickHandler}
         />
       </div>
       {openDialog && (
         <div className="user-dialog">
           <ul>
-            <li>Settings</li>
+            <li>Your Profile</li>
             <li>Settings</li>
             <li>Settings</li>
             <li>Settings</li>

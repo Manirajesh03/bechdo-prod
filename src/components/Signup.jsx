@@ -1,5 +1,8 @@
 import { useState } from "react";
 import Button from "./Button";
+import { useDispatch } from "react-redux";
+import { loginAction } from "../redux/actions";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -8,15 +11,13 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [mode, setMode] = useState("login");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(firstName);
-    console.log(lastName);
-    console.log(email);
-    console.log(password);
-    console.log(confirmPassword);
-    setMode((prev) => (prev === "signup" ? "login" : "signup"));
+    dispatch(loginAction());
+    navigate("/");
   };
   return (
     <form onSubmit={submitHandler} className="signup-form">

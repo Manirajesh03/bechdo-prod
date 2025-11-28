@@ -1,2 +1,3 @@
 export const VIEW_PRODUCT = "VIEW_PRODUCT";
 export const LOGIN_ACTION = "LOGIN_ACTION";
+export const LOGOUT_ACTION = "LOGOUT_ACTION";

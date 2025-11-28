@@ -1,4 +1,4 @@
-import { LOGIN_ACTION, VIEW_PRODUCT } from "./actionTypes";
+import { LOGIN_ACTION, LOGOUT_ACTION, VIEW_PRODUCT } from "./actionTypes";
 
 const initialState = {
   auth: {
@@ -8,14 +8,19 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
-  console.log(action, "action");
+  console.log(state?.auth?.isAuthenticated);
   switch (action.type) {
     case VIEW_PRODUCT:
-      return { ...initialState, viewProduct: [action.payload] };
+      return { ...state, viewProduct: [action.payload] };
     case LOGIN_ACTION:
       return {
-        ...initialState,
-        auth: { isAuthenticated: !state?.auth?.isAuthenticated },
+        ...state,
+        auth: { isAuthenticated: true },
+      };
+    case LOGOUT_ACTION:
+      return {
+        ...state,
+        auth: { isAuthenticated: false },
       };
     default:
       return state;
