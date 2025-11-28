@@ -9,7 +9,7 @@ const ViewProductDetails = () => {
   const { title, price, description, imgs } = storeData?.viewProduct?.[0];
 
   return (
-    <div>
+    <div className="middle-content">
       <ProductCard
         title={title}
         price={price}

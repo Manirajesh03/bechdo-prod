@@ -25,7 +25,20 @@ function App() {
           </Routes>
         </div>
         <Footer />
-        <h4 className="made-with-love">Made with ❤️ from India</h4>
+        <a
+          href="https://madewithloveinindia.org"
+          className="made-with-love"
+          target="_blank"
+        >
+          Made with{" "}
+          <span
+            aria-label="Love"
+            style={{ color: "#f43f5e", fontSize: "24px" }}
+          >
+            &hearts;
+          </span>{" "}
+          in India
+        </a>
       </div>
     </Provider>
   );

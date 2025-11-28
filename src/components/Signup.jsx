@@ -25,7 +25,7 @@ const Signup = () => {
     }
   };
   return (
-    <form onSubmit={submitHandler} className="signup-form">
+    <form onSubmit={submitHandler} className="signup-form middle-content">
       {mode === "signup" && (
         <>
           <label htmlFor="firstName">First Name*</label>

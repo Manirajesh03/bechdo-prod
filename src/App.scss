@@ -39,6 +39,21 @@ body {
 
 .content {
   flex: 1;
+  width: 100%;
+}
+
+.made-with-love {
+  margin: 20px;
+}
+
+@media (max-width: 576px) {
+  .content {
+    width: 95%;
+  }
+  .made-with-love {
+    margin: 0;
+    padding: 20px;
+  }
 }
 
 /* Desktop / Mobile toggles */
@@ -244,6 +259,34 @@ input::placeholder {
   }
 }
 
+@media (max-width: 767px) {
+  .middle-content {
+    width: 60%;
+    margin: auto;
+    input {
+      padding: 12px;
+    }
+    .button {
+      padding: 12px !important;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .middle-content {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 767px) {
+  .middle-content {
+    width: 40%;
+    margin: auto;
+  }
+}
+
 /* --------------------------------------------------
    SEARCH INPUT
 -------------------------------------------------- */
@@ -281,6 +324,7 @@ input::placeholder {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 60px;
 
   position: sticky;
   top: 0;
@@ -302,7 +346,8 @@ input::placeholder {
 
 @media (max-width: 650px) {
   .navbar {
-    padding: 20px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -319,7 +364,6 @@ input::placeholder {
 
   background: #000;
   margin-top: 60px;
-  margin-bottom: 20px;
 
   box-shadow: inset 0 2px 4px rgba(64, 224, 208, 0.05),
     0 -4px 12px rgba(64, 224, 208, 0.25);
@@ -366,6 +410,7 @@ input::placeholder {
       margin: 2px 0;
       font-size: 14px;
       color: rgba(64, 224, 208, 0.8);
+      opacity: 0.8;
     }
   }
 }
@@ -378,10 +423,17 @@ input::placeholder {
     gap: 20px;
   }
 }
+
+@media (min-width: 992px) {
+  .footer {
+    margin-top: 80px;
+  }
+}
 @media (max-width: 480px) {
   .footer {
     padding: 20px;
     gap: 16px;
+    margin-top: 40px;
   }
 
   .CompanyAddress h4 {
@@ -391,48 +443,9 @@ input::placeholder {
   .CompanyAddress p {
     font-size: 12px;
     line-height: 1.4;
+    opacity: 0.8;
   }
 }
-
-/* --------------------------------------------------
-   RESPONSIVE LOGO
--------------------------------------------------- */
-// .logo-text {
-//   padding: 6px 18px;
-//   border-radius: 12px;
-//   background: #000;
-//   border: 1px solid rgba(64, 224, 208, 0.4);
-
-//   color: $primaryColor;
-//   font-weight: 700;
-//   font-size: 24px;
-
-//   transition: 0.25s ease;
-
-//   @media (hover: hover) {
-//     &:hover {
-//       transform: translateY(-2px);
-//       color: #7fffea;
-//       border-color: rgba(64, 224, 208, 0.7);
-//       box-shadow: 0 0 16px rgba(64, 224, 208, 0.45),
-//         0 0 24px rgba(64, 224, 208, 0.25);
-//     }
-//   }
-// }
-
-// .tagline {
-//   font-size: 13px;
-//   margin-top: 3px;
-//   color: rgba(64, 224, 208, 0.75);
-
-//   transition: 0.25s;
-
-//   @media (hover: hover) {
-//     &:hover {
-//       color: #86fff3;
-//     }
-//   }
-// }
 
 .logo-text {
   color: $primaryColor;
