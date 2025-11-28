@@ -46,7 +46,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="logo-container">
-        <h2 className="logo" onClick={backToHome}>
+        <h2 className="logo-text" onClick={backToHome}>
           SastaDealz
           <span className="tagline">Why Pay More?</span>
         </h2>

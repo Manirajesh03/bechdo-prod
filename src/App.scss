@@ -45,39 +45,12 @@ body {
     flex: 1;
   }
 
-  .logo {
-    color: $primaryColor;
-    padding: 3px 16px;
-    border-radius: 12px;
-    background: #000;
-    border: 1px solid rgba(64, 224, 208, 0.4);
-    font-weight: 700;
-    font-size: 24px;
-    letter-spacing: 1px;
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     cursor: pointer;
-    transition: 0.25s ease;
-    margin: 0;
-
-    .tagline {
-      display: block;
-      font-size: 13px;
-      font-weight: 400;
-      color: rgba(64, 224, 208, 0.7);
-      letter-spacing: 0.5px;
-      transition: 0.25s ease;
-
-      &:hover {
-        color: #7fffea;
-      }
-    }
-
-    &:hover {
-      box-shadow: 0 0 16px rgba(64, 224, 208, 0.45),
-        0 0 24px rgba(64, 224, 208, 0.25);
-      border-color: rgba(64, 224, 208, 0.7);
-      color: #7fffea;
-      transform: translateY(-2px);
-    }
+    user-select: none;
   }
 
   input:focus {
@@ -405,5 +378,73 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
+}
+
+.logo-text {
+  color: $primaryColor;
+  padding: 6px 18px;
+  border-radius: 12px;
+  background: #000;
+  border: 1px solid rgba(64, 224, 208, 0.4);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 1px;
+  transition: 0.25s ease;
+  margin: 0;
+
+  /* Desktop hover (disabled for mobile automatically) */
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 0 16px rgba(64, 224, 208, 0.45),
+        0 0 24px rgba(64, 224, 208, 0.25);
+      border-color: rgba(64, 224, 208, 0.7);
+      color: #7fffea;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.tagline {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(64, 224, 208, 0.75);
+  letter-spacing: 0.4px;
+  margin-top: 3px;
+  transition: 0.25s ease;
+
+  @media (hover: hover) {
+    &:hover {
+      color: #86fff3;
+    }
+  }
+}
+
+/* Mobile Optimized Logo (< 992px) */
+@media (max-width: 992px) {
+  .logo-text {
+    font-size: 18px;
+    padding: 4px 12px;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .tagline {
+    font-size: 11px;
+    margin-top: 2px;
+    letter-spacing: 0.3px;
+  }
+}
+
+/* Smaller mobile screens (< 480px) */
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 16px;
+    padding: 3px 10px;
+  }
+
+  .tagline {
+    font-size: 10px;
   }
 }
