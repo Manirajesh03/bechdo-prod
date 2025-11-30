@@ -3,6 +3,7 @@ import Button from "./Button";
 import { useDispatch, useSelector } from "react-redux";
 import { loginAction } from "../redux/actions";
 import { useNavigate } from "react-router-dom";
+import useFetch from "./useFetch";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -14,15 +15,18 @@ const Signup = () => {
   const viewProductFlow = useSelector((store) => store?.viewProduct);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const initiateLogin = useFetch();
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(loginAction());
-    if (!viewProductFlow.length) {
-      navigate("/");
-    } else {
-      navigate("/viewDetails");
-    }
+    const data = initiateLogin;
+    console.log(data, "data");
+    // dispatch(loginAction());
+    // if (!viewProductFlow.length) {
+    //   navigate("/");
+    // } else {
+    //   navigate("/viewDetails");
+    // }
   };
   return (
     <form onSubmit={submitHandler} className="signup-form middle-content">
@@ -64,7 +68,7 @@ const Signup = () => {
       />
       {mode === "signup" && (
         <>
-          <label htmlFor="confirmPassword">Password*</label>
+          <label htmlFor="confirmPassword">Confirm Password*</label>
           <input
             type="password"
             id="confirmPassword"
